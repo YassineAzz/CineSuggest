@@ -1,1 +1,1 @@
-const cc = 'coucou'
+import "expo-router/entry";
