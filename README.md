@@ -23,7 +23,7 @@ npx create-expo-app -e with-router
 - Axios request
 - Python3 Back-end
 
-## Contributor
+## 🧑‍🤝‍🧑 Contributing
 - This project was carried out by :
 -   [Maxime M](https://www.linkedin.com/in/maxime-molesin-7133b5234/) Back end developer (Python) 
 -   [Hugo T](https://www.linkedin.com/in/hugo-thouluc-8b3397164/) Back end developer (Python)
