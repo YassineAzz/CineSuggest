@@ -25,6 +25,6 @@ npx create-expo-app -e with-router
 
 ## 🧑‍🤝‍🧑 Contributing
 - This project was carried out by :
--   [Maxime M](https://www.linkedin.com/in/maxime-molesin-7133b5234/) Back end developer (Python) 
+-   [Maxime M](https://www.linkedin.com/in/maxime-molesin-7133b5234/) Back end developer & Product Owner (Python) 
 -   [Hugo T](https://www.linkedin.com/in/hugo-thouluc-8b3397164/) Back end developer (Python)
 -   [Yassine A](https://www.linkedin.com/in/yassine-azz/) Front end developer (JavaScript/React) Tech Lead 
