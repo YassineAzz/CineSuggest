@@ -19,13 +19,12 @@ npx create-expo-app -e with-router
 - Figma design ui/ux
 - Notion project management
 - ExpoGo MobileApp version
-- Python Flask framework Back-end
+- Python3 Flask framework Back-end
 - JavaScript React framework Front-end
 - Axios request
-- Python3 Back-end
 
 ## 🧑‍🤝‍🧑 Contributing
 - This project was carried out by :
 -   [Maxime M](https://www.linkedin.com/in/maxime-molesin-7133b5234/) Back end developer & Product Owner (Python) 
 -   [Hugo T](https://www.linkedin.com/in/hugo-thouluc-8b3397164/) Back end developer (Python)
--   [Yassine A](https://www.linkedin.com/in/yassine-azz/) Front end developer (JavaScript/React) Tech Lead 
+-   [Yassine A](https://www.linkedin.com/in/yassine-azz/) Full-stack developer (JavaScript/React) Tech Lead 
