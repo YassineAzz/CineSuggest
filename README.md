@@ -19,7 +19,8 @@ npx create-expo-app -e with-router
 - Figma design ui/ux
 - Notion project management
 - ExpoGo MobileApp version
-- JavaScript/React Front-end
+- Python Flask framework Back-end
+- JavaScript React framework Front-end
 - Axios request
 - Python3 Back-end
 
