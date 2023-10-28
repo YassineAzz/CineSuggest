@@ -16,6 +16,6 @@ npx create-expo-app -e with-router
 - Start the serveur with npm start
 
 - This project was carried out by :
-- Maxime M (https://www.linkedin.com/in/maxime-molesin-7133b5234/)
+- [Maxime M](https://www.linkedin.com/in/maxime-molesin-7133b5234/)
 - Hugo T (https://www.linkedin.com/in/hugo-thouluc-8b3397164/)
 - Yassine A (https://www.linkedin.com/in/yassine-azz/)
