@@ -1,9 +1,11 @@
 import { View, ScrollView, SafeAreaView } from 'react-native'
 import { useState } from 'react'
 import { Stack, useRouter } from 'expo-router'
-import {COLORS, SIZES} from '../constants'
+import {COLORS, SIZES, icons, images} from '../constants'
 import { ScreenStackHeaderBackButtonImage } from 'react-native-screens'
 import { Welcome, ScreenHeaderBtn } from '../components'
+import Popularmovies from '../components/home/popular/Popularmovies'
+import Chatbot from '../components/home/bot/Chatbot'
 
 const Home = () => {
 
@@ -16,12 +18,12 @@ const Home = () => {
                 headerStyle: { backgroundColor: COLORS.lightWhite},
                 headerShadowVisible: false,
                 headerLeft: () => (
-                     <ScreenHeaderBtn  dimension="60%" />
+                     <ScreenHeaderBtn iconUrl={images.logo} dimension="140%" />
                 ),
                 headerRight: () => (
-                    <ScreenHeaderBtn  dimension = "100%"/>
+                    <ScreenHeaderBtn iconUrl={icons.menu} dimension = "80%"/>
                 ),
-                headerTitle: "CinéSuggest"
+                headerTitle: ""
             }}
             />
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -34,6 +36,8 @@ const Home = () => {
                     <Welcome
                     
                     />
+                    <Chatbot/>
+                    <Popularmovies/>
                 </View>
             </ScrollView>
         </SafeAreaView>

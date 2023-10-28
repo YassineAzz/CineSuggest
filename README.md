@@ -14,3 +14,8 @@ npx create-expo-app -e with-router
 - [Expo Router: Repo](https://github.com/expo/router)
 
 - Start the serveur with npm start
+
+- This project was carried out by :
+        - Maxime M
+        - Hugo T
+        - Yassine A
