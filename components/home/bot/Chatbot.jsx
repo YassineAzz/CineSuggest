@@ -1,7 +1,7 @@
 import { useState} from 'react'
-import { View, Text } from 'react-native'
-import { COLORS } from '../../../constants';
-import styles from './Chatbot.style'
+import {View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
+import { COLORS, icons, SIZES } from '../../../constants';
+import styles from '../../home/welcome/welcome.style'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Chatbot = () => {
@@ -16,29 +16,35 @@ const Chatbot = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1,  backgroundColor: COLORS.lightWhite}}>
-      <SafeAreaView style={styles.container}>
-      <div style={styles.headerTitle} className="chat">
+    <View>
+      <View style={styles.searchContainer}> 
+        <View style={styles.searchWrapper}>
+        <div style={styles.headerTitle} className="chat">
         {messages.map((msg, index) => (
           <div key={index}>{msg}</div>
         ))}
       </div>
-      <input
-        style={styles.headerTitle}
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        onKeyDown={ (e) => {
-          if (e.key === 'Enter') {
-            sendMessage()
-          }
-        }}
-        placeholder="Mot clé de vos envies"
-      />
-      </SafeAreaView>
-      <button style={styles.headerTitle} onClick={sendMessage}>Valider</button>
-    </SafeAreaView>
-  );
+          <TextInput
+            style={styles.searchInput}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            onKeyDown={ (e) => {
+              if (e.key === 'Enter') {
+                sendMessage()
+              }
+            }}
+          />
+          </View>
+          <TouchableOpacity style={styles.searchBtn} onClick={sendMessage}>
+          <Image
+            source={icons.search}
+            resizeMode='contain'
+            style={styles.searchBtnImage}
+          />
+        </TouchableOpacity>
+      </View>
+    </View>
+  )
 }
 
 export default Chatbot
