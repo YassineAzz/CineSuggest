@@ -33,22 +33,6 @@ const Welcome = () => {
         <Text style={styles.userName}>Hello Suka</Text>
         <Text style={styles.welcomeMessage}>Find your movie to watch</Text>
       </View>
-      <View style={styles.searchContainer}> 
-        <View style={styles.searchWrapper}>
-          <TextInput
-            style={styles.searchInput}
-            value=""
-            onChange={() => {}}
-          />
-        </View>
-        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
-          <Image
-            source={icons.search}
-            resizeMode='contain'
-            style={styles.searchBtnImage}
-          />
-        </TouchableOpacity>
-      </View>
       <View style={styles.tabsContainer}>
         <FlatList 
           data={movie_types}
