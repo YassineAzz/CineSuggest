@@ -23,7 +23,6 @@ for i in range(len(genre)):
             print(f'rating : {rating}')
     else : i+=1
 
-
 # keywords = ia.search_movie('football')
 
 # for movie in keywords:
