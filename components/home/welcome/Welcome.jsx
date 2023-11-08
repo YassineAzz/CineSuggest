@@ -14,7 +14,7 @@ const movie_types = [
   "Aventure",
   "Animation",
   "Documentaire",
-  "Fantasy",
+  "Fantastique",
   "Mystère",
   "Thriller",
   "Crime",
@@ -25,7 +25,7 @@ const movie_types = [
 
 const Welcome = () => {
   const router = useRouter()
-  const [active_movie_type, set_active_movie_type] = useState("Action")
+  const [active_movie_type, set_active_movie_type] = useState([])
 
   return (
     <View>
@@ -40,7 +40,6 @@ const Welcome = () => {
             <TouchableOpacity style={styles.tab(active_movie_type, item)}
             onPress={() => {
               set_active_movie_type(item)
-              router.push('/search/${item}')
             }}
             >
               <Text style={styles.tabText(active_movie_type, item)}>{item}</Text>
