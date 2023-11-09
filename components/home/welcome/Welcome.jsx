@@ -33,11 +33,12 @@ const Welcome = () => {
         <Text style={styles.userName}>Hello Suka</Text>
         <Text style={styles.welcomeMessage}>Find your movie to watch</Text>
       </View>
-      <View style={styles.tabsContainer}>
+      <View style={styles.infoContainer}>
         <FlatList 
           data={movie_types}
           renderItem={({ item }) => (
-            <TouchableOpacity style={styles.tab(active_movie_type, item)}
+            <TouchableOpacity 
+            style={styles.tab(active_movie_type, item)}
             onPress={() => {
               set_active_movie_type(item)
             }}

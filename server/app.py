@@ -7,8 +7,9 @@ CORS(app, resources={r"/search/*": {"origins": "http://localhost:8081"}})
 @app.route('/search/keyword', methods=['POST'])
 def receive_data():
     data = request.get_json()
-    print((data['message']))
-    return jsonify({'message': 'Données enregistrées avec succès'})
+    keyWord = data['message']
+    print(keyWord)
+    return keyWord
 
 if __name__ == '__main__':
     app.run()

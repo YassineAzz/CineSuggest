@@ -1,6 +1,6 @@
 import { useState} from 'react'
-import { View, Text } from 'react-native'
-import { COLORS } from '../../../constants';
+import { View, Text, Image, TextInput, TouchableOpacity, FlatList } from 'react-native'
+import { COLORS, icons } from '../../../constants';
 import styles from './Chatbot.style'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import axios from 'axios'
@@ -10,41 +10,47 @@ const  Chatbot = () => {
   const [message, setMessage] = useState('');
 
   const  sendMessage = async () => {
-    if (message) {
+    if (message && message.trim().length > 0) {
       setMessages([...messages, message]);
       setMessage('');
       try {
         await axios.post('http://127.0.0.1:5000/search/keyword', { message });
-        console.log('Données envoyées avec succès');
       } catch (error) {
-        console.error('Erreur lors de l\'envoi des données', error);
+        console.error('ERROR while searching movies with keyWord', error);
       }
     }
   };
 
   return (
-    <SafeAreaView style={{ flex: 1,  backgroundColor: COLORS.lightWhite}}>
-      <SafeAreaView style={styles.container}>
-      <div style={styles.headerTitle} className="chat">
-        {messages.map((msg, index) => (
-          <div key={index}>{msg}</div>
-        ))}
-      </div>
-      <input
-        style={styles.headerTitle}
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        onKeyDown={ (e) => {
-          if (e.key === 'Enter') {
-            sendMessage()
-          }
-        }}
-        placeholder="Mot clé de vos envies"
-      />
-      </SafeAreaView>
-      <button style={styles.headerTitle} onClick={sendMessage}>Valider</button>
-    </SafeAreaView>
+    <View style={styles.infoContainer}>
+        <div style={styles.welcomeMessage} className="chat">
+          {messages.map((msg, index) => (
+            <div key={index}style={styles.chatBubble}>{msg} </div>
+          ))}
+        </div>
+        <View style={styles.searchContainer}>
+          <View style={styles.searchWrapper}>
+            <TextInput
+              style={[styles.searchInput, styles.welcomeMessage]}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              onKeyPress={ (e) => {
+                if (e.key === 'Enter') {
+                  sendMessage()
+                }
+              }}
+              placeholder=""
+            />
+          </View>
+          <TouchableOpacity style={styles.searchBtn} onPress={sendMessage}>
+          <Image 
+            source={icons.search}
+            resizeMode='contain'
+            style={styles.searchBtnImage}
+          />
+        </TouchableOpacity>
+        </View>
+    </View>
   );
 }
 
