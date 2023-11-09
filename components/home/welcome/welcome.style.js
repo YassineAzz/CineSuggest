@@ -17,6 +17,17 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     marginTop: 2,
   },
+  infoContainer: {
+    marginTop: SIZES.large,
+  },
+  logoContainer: {
+    width: 50,
+    height: 50,
+    backgroundColor: COLORS.white,
+    borderRadius: SIZES.medium,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   searchContainer: {
     justifyContent: "center",
     alignItems: "center",
