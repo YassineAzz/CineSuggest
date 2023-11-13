@@ -17,6 +17,18 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     marginTop: 2,
   },
+  chatBubble: {
+    backgroundColor: '#007AFF',
+    borderRadius: '20px',
+    padding: '10px',
+    margin: '5px 0',
+    maxWidth: '15%',
+    width: 'auto',
+    fontSize: '14px',
+  },
+  infoContainer: {
+    marginTop: SIZES.large,
+  },
   searchContainer: {
     justifyContent: "center",
     alignItems: "center",
@@ -68,3 +80,5 @@ const styles = StyleSheet.create({
     color: activeJobType === item ? COLORS.secondary : COLORS.gray2,
   }),
 });
+
+export default styles;

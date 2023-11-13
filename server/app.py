@@ -16,6 +16,5 @@ def receive_data():
     print(f1.titre)
     print(f1.annee)
     return jsonify({'message': 'Données enregistrées avec succès'})
-
 if __name__ == '__main__':
     app.run()
